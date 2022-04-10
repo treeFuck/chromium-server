@@ -1,0 +1,19 @@
+{
+  "name": "chromium-server",
+  "version": "1.0.0",
+  "description": "跑个服务，专门开启 chromium remote-debugging",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "treefuck",
+  "license": "ISC",
+  "dependencies": {
+    "internal-ip": "^7.0.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0",
+    "puppeteer": "13.5.0"
+  }
+}
