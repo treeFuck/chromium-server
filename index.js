@@ -2,10 +2,9 @@ import Koa from 'koa';
 import koaBody from 'koa-body';
 import Router from 'koa-router';
 import launch from './browser.js';
-import { internalIpV4 } from 'internal-ip';
 
 let browser = null;
-let wsEndpoint = null;
+let wsEndpoint = '丢';
 let ip = null;
 const router = new Router();
 
@@ -18,7 +17,7 @@ router.get('/test', async ctx => {
 
 let init = async () => {
 
-  ip = await internalIpV4();
+  ip = '175.178.108.248';  
   browser = await launch(ip, 9222);
   wsEndpoint = await browser.wsEndpoint();
   
